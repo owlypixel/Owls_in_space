@@ -1,0 +1,263 @@
+@import 'normalize';
+@import 'mixins';
+
+* {
+	box-sizing: border-box;
+}
+html {
+	background: #4A569D;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+canvas {
+	background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+svg{
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translateZ(0px);
+	fill: #444444;
+}
+// ========OWLY1===============
+
+.Eye1, .Eye2 {
+	animation: blink 5s infinite;
+	transform-origin: 0px;
+}
+.Wing_Left {
+	animation: shake-left-wing 500ms infinite;
+	transform-origin: 37% 0%;
+}
+.Wing_Right {
+	animation: shake-right-wing 500ms infinite;
+	transform-origin: 57% 0%;
+}
+.Left_Leg {
+	animation: shake-left-leg 1.5s infinite;
+	transform-origin: 66% 0%;
+}
+.Right_Leg {
+	animation: shake-right-leg 2s infinite;
+	transform-origin: 32% 2%;
+}
+.st0 {
+	display: none;
+}
+.st11 {
+	fill: #FE931D;
+	stroke: #E4764F;
+	stroke-miterlimit: 10;
+}
+.st4 {
+	fill: #D4B2EE;
+}
+.st5 {
+	fill: #BD95DC;
+}
+.st6 {
+	display: none;
+	fill: #BD95DC;
+}
+.st7 {
+	fill: #FFFFFF;
+}
+.st8 {
+	stroke: #000000;
+	stroke-miterlimit: 10;
+}
+.st9 {
+	fill: #FFFFFF;
+	stroke: #000000;
+	stroke-miterlimit: 10;
+}
+.st10 {
+	fill: #482D2C;
+}
+
+// ===========OWLY2===============
+
+.pupil {
+	animation: look-aside 10s infinite alternate;
+	transform-origin: center center;
+}
+.rear {
+	animation: right-ear 4s infinite;
+    transform-origin: 0% 100%;
+}
+.lear {
+	animation: left-ear 4s infinite;
+    transform-origin: 100% 100%;
+}
+.lflitter {
+	animation: lflitter 0.5s infinite;
+	transform-origin: 68% 11%;
+	animation-delay: 0.8s;
+}
+.rflitter {
+	animation: rflitter 0.5s infinite;
+	transform-origin: 34% 9%;
+	animation-delay: 0.8s;
+}
+.rleg {
+	animation: angry-foot 4s infinite;
+}
+.lleg {
+	animation: angry-foot 4s infinite;
+	animation-delay: 3s;
+}
+
+// ==========KEYFRAMES===========
+
+@keyframes blink {
+	40% {
+		transform: scaleY(1);
+	}
+	45% {
+		transform: scaleY(0.1);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+}
+@keyframes shake-left-wing {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(130deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes shake-right-wing {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-130deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes shake-left-leg {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes shake-right-leg {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes floaty {
+	0% {
+		transform: translateY(25px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(25px);
+	}
+}
+@keyframes right-ear {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes left-ear {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes look-aside {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(50deg);
+	}
+	40% {
+		transform: rotate(50deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes lflitter {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes rflitter {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-100deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes angry-foot {
+	0% {
+		transform: translateY(0px);
+	}
+	5% {
+		transform: translateY(-5px);
+	}
+	10% {
+		transform: translateY(0px);
+	}
+	15% {
+		transform: translateY(-5px);
+	}
+	20% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
