@@ -111,6 +111,12 @@ svg{
 	animation-delay: 3s;
 }
 
+// =======fill-box-fix---
+
+.Eye1, .Eye2, .Wing_Left, .Wing_Right, .Left_Leg, .Right_Leg, .pupil, .rear, .lear, .lflitter, .rflitter, .rleg, .lleg {
+  transform-box: fill-box;
+}   
+
 // ==========KEYFRAMES===========
 
 @keyframes blink {
